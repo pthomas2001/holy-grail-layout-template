@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box
+}
+
+
+
+/* DESIGN */
+
+.header {
+  background: greenyellow;
+  font-size: 2rem;
+  text-align: center
+}
+
+.menu {
+  background: grey;
+  color: white
+}
+
+.main {
+  background: #ADD8E6;
+  text-align: center
+}
+
+.sidebar {
+  background: grey;
+  color: white
+}
+
+.footer {
+  background: black;
+  color: white;
+  font-size: 2rem;
+  text-align: center
+}
+
+
+.grid-item {
+  padding: 1rem
+}
+
+
+
+/* MOBILE GRID LAYOUT */
+
+.grid-container {
+  display: grid;
+  grid:
+    "header" 96px
+    "menu" 56px
+    "main"
+    "sidebar" 56px
+    "footer" 60px;
+  gap: 10px;
+  height: 100vh
+}
+
+
+
+/* DESKTOP GRID LAYOUT */
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid:
+      "header header header" 65px
+      "menu main sidebar"
+      "footer footer footer" 60px
+  }
+
+  .header {
+    grid-area: header
+  }
+
+  .menu {
+    grid-area: menu
+  }
+
+  .main {
+    grid-area: main
+  }
+
+  .sidebar {
+    grid-area: sidebar
+  }
+
+  .footer {
+    grid-area: footer
+  }
+}
